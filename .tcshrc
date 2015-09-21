@@ -8,7 +8,7 @@ alias "rm"  'rm -i'
 alias "mv" 'mv -i'
 alias "new" "ls --color=auto -tlhr | tail -15"
 alias "newd" "ls -dltr1 */ | tail -15"
-alias "s" "source https://raw.githubusercontent.com/Fette3lke/rc/master/.tcshrc"
+alias "s" "curl https://raw.githubusercontent.com/Fette3lke/rc/master/.tcshrc | source /dev/stdin"
 alias "calc" "echo '\!*' | bc -l"
 alias repl 'perl -pi -e "s/\!:1/\!:2/g" \!:3'
 alias hist "history|grep $1"
