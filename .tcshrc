@@ -1,0 +1,37 @@
+setenv TERM "xterm-256color"
+alias em 'emacs24 \!* &'
+alias emn 'emacs24 -nw \!*'
+alias m 'more \!*'
+alias ssh 'ssh -Y'
+alias ls 'ls --color=auto'
+alias "rm"  'rm -i'
+alias "mv" 'mv -i'
+alias "new" "ls --color=auto -tlhr | tail -15"
+alias "newd" "ls -dltr1 */ | tail -15"
+alias "s" "source https://raw.githubusercontent.com/Fette3lke/rc/master/.tcshrc"
+alias "calc" "echo '\!*' | bc -l"
+alias repl 'perl -pi -e "s/\!:1/\!:2/g" \!:3'
+alias hist "history|grep $1"
+alias rsync 'rsync -avzuC'
+alias pd 'pushd'
+alias xopen 'xdg-open'
+alias ipn "ipython notebook"
+
+set nobeep
+set history = 1999  	
+set histfile = ~/.csh_history 
+set histdup = erase 	K
+set savehist = ( 750 merge ) 
+set ellipsis
+set prompt="[%n@%m:%c03]%# "
+set autolist=ambiguous
+set color
+setenv GREP_OPTIONS --color=auto
+setenv GREP_COLOR 32
+
+bindkey -k up history-search-backward 
+bindkey -k down history-search-forward
+bindkey  "^R" i-search-back
+
+complete 'cd/1/d/'
+
